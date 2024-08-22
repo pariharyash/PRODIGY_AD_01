@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Display -->
+    <TextView
+        android:id="@+id/tvDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="32sp"
+        android:gravity="end"
+        android:text="0"
+        android:padding="8dp"
+        android:background="#EEE"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Calculator Buttons -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rowCount="5"
+        android:columnCount="4"
+        android:layout_gravity="center">
+
+        <!-- Number Buttons -->
+        <Button android:text="7" android:onClick="onDigit" style="@style/CalcButton"/>
+        <Button android:text="8" android:onClick="onDigit" style="@style/CalcButton"/>
+        <Button android:text="9" android:onClick="onDigit" style="@style/CalcButton"/>
+        <Button android:text="/" android:onClick="onOperator" style="@style/CalcButton"/>
+
+        <Button android:text="4" android:onClick="onDigit" style="@style/CalcButton"/>
+        <Button android:text="5" android:onClick="onDigit" style="@style/CalcButton"/>
+        <Button android:text="6" android:onClick="onDigit" style="@style/CalcButton"/>
+        <Button android:text="*" android:onClick="onOperator" style="@style/CalcButton"/>
+
+        <Button android:text="1" android:onClick="onDigit" style="@style/CalcButton"/>
+        <Button android:text="2" android:onClick="onDigit" style="@style/CalcButton"/>
+        <Button android:text="3" android:onClick="onDigit" style="@style/CalcButton"/>
+        <Button android:text="-" android:onClick="onOperator" style="@style/CalcButton"/>
+
+        <Button android:text="C" android:onClick="onClear" style="@style/CalcButton"/>
+        <Button android:text="0" android:onClick="onDigit" style="@style/CalcButton"/>
+        <Button android:text="=" android:onClick="onEqual" style="@style/CalcButton"/>
+        <Button android:text="+" android:onClick="onOperator" style="@style/CalcButton"/>
+
+    </GridLayout>
+
+</LinearLayout>
